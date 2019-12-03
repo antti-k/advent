@@ -7,7 +7,6 @@ points1 = []
 x = 0
 y = 0
 d = 0
-dists1 = []
 for point in line1.split(","):
     dir = point[0]
     dist = int(point[1:])
@@ -22,11 +21,9 @@ for point in line1.split(","):
             y -= 1
 
         d += 1
-        dists1.append(d)
         points1.append((x, y))
 
 points2 = []
-dists2 = []
 x = 0
 y = 0
 d = 0
@@ -44,7 +41,6 @@ for point in line2.split(","):
             y -= 1
 
         d += 1
-        dists2.append(d)
         points2.append((x, y))
 
 
@@ -55,7 +51,7 @@ print(min(mandists))
 
 dists = []
 for point in points:
-    dists.append(dists1[points1.index(point)] + dists2[points2.index(point)])
+    dists.append(points1.index(point) + points2.index(point))
 
 print(min(dists))
 
