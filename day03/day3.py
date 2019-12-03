@@ -6,7 +6,6 @@ line2 = "L993,U121,L882,U500,L740,D222,R574,U947,L541,U949,L219,D492,R108,D621,L
 points1 = []
 x = 0
 y = 0
-d = 0
 for point in line1.split(","):
     dir = point[0]
     dist = int(point[1:])
@@ -20,13 +19,11 @@ for point in line1.split(","):
         elif (dir == "D"):
             y -= 1
 
-        d += 1
         points1.append((x, y))
 
 points2 = []
 x = 0
 y = 0
-d = 0
 for point in line2.split(","):
     dir = point[0]
     dist = int(point[1:])
@@ -40,7 +37,6 @@ for point in line2.split(","):
         elif (dir == "D"):
             y -= 1
 
-        d += 1
         points2.append((x, y))
 
 
