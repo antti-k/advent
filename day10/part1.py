@@ -63,4 +63,4 @@ def same_row(x, row):
     return before + after
 
 los_counts = map(lambda coords: los_count(coords), stations)
-print(max(los_counts))))
+print(max(los_counts))
